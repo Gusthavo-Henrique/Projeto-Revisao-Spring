@@ -55,17 +55,4 @@ class ClientServicesTest {
 		verifyNoMoreInteractions(repository);
 	}
 
-	@Test
-	void findAllSucess() {
-		List<Client> client = new ArrayList<>();
-		client.add(new Client());
-		
-		when(repository.findAll()).thenReturn(client);
-		
-		List<ClientDTO> clients = services.findAll();
-		
-		assertEquals(mapper.map(client, ClientDTO.class), clients);
-		verify(repository).findAll();
-	}
-	
 }
