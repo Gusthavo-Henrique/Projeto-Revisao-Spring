@@ -3,9 +3,11 @@ package br.com.gusthavo.dto;
 import java.io.Serializable;
 import java.util.Objects;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import br.com.gusthavo.entity.Client;
 
-public class ClientDTO implements Serializable{
+public class ClientDTO extends RepresentationModel<ClientDTO> implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
